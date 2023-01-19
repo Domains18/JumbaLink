@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider,Route, useRouteError } from "react-router-dom";
 import React from "react";
 
 import Error404 from "./pages/Error404";
@@ -8,7 +8,6 @@ import Recovery from "./pages/Recovery";
 import Register from "./pages/Register";
 import Reset from "./pages/Reset";
 import UserName from "./pages/UserName";
-
 
 
 
@@ -40,14 +39,26 @@ const router = createBrowserRouter([
     {
         path: "*",
         element: <Error404></Error404>
-    }
-]);
+        
+    },
+    
+], );
 export default function App() {
     return (
         <main>
-            <RouterProvider router={router}>
-
+            <RouterProvider router={router} errorElement={<ErrorBoundary/>}>
             </RouterProvider>
       </main>
     )
   }
+
+
+function ErrorBoundary() {
+    let error = useRouteError();
+    console.log(error)
+    return (
+        <div>
+            <h1>Internal server error</h1>
+        </div>
+    )
+}
