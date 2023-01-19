@@ -22,7 +22,7 @@ const Password = () => {
         <div className={styles.glass}>
           <div className="title flex flex-col items-center">
             <span className="py-4 text-xl w-2/3 text-center text-gray-500">
-              Please enter your Password
+              Enter Your Email To Proceed
             </span>
           </div>
           <form className="py-1" onSubmit={formik.handleSubmit}>
@@ -30,11 +30,11 @@ const Password = () => {
               <img src={avatar} className={styles.profileImage} alt="avatar" />
             </div>
             <div className="text-box flex flex-col items-center gap-6">
-              <input {...formik.getFieldProps('Password')} type="password" placeholder='enter your password' className='border-4 py-2 rounded-lg  w-full' />
-              <button type='submit' className={styles.btn}>LogIn</button>
+              <input {...formik.getFieldProps('Password')} type="text" placeholder='enter your email' className={styles.input} />
+              <button type='submit' className={styles.btn}>Reset</button>
             </div>
             <div className="text-center py-">
-              <span className='text-blue-500'>Forgot Password? <Link to="/reset" className='text-red-500'> Reset here</Link> </span>
+              <span className='text-blue-500'>No account? <Link to="/reset" className='text-red-500'> Register here</Link> </span>
             </div>
           </form>
         </div>

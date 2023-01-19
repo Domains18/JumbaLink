@@ -28,3 +28,16 @@
 input[type='file']{
     display: none;
 }
+.input{
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid;
+}
+.input::placeholder{
+    padding-left: 42px;
+}
+.input:hover{
+    padding: 15px;
+    border: 2px solid red;
+    transition: 0.5s ease-out;
+}
