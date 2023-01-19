@@ -36,7 +36,7 @@ const UserName = () => {
             <div className="text-box flex flex-col items-center gap-6">
               <h4 className='text-5xl font-bold '>Hello Again</h4>
 
-              <input {...formik.getFieldProps('UserName')}type="text" placeholder='userName' className='border-4 py-2 rounded-lg  w-3/4' />
+              <input {...formik.getFieldProps('UserName')}type="text" placeholder='userName' className={styles.input} />
               <button type='submit' className={styles.btn}>LogIn</button>
             </div>
 

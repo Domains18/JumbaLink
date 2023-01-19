@@ -5,7 +5,8 @@ import styles from '../styles/Username.module.css';
 import { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import { validatePassword } from '../helper/validate';
-const Password = () => {
+
+const Recovery = () => {
   const formik = useFormik({
     initialValues: {
       Password: ''
@@ -21,8 +22,8 @@ const Password = () => {
       <div className="flex justify-center items-center min-h-screen">
         <div className={styles.glass}>
           <div className="title flex flex-col items-center">
-            <span className="py-4 text-xl w-2/3 text-center text-gray-500">
-              Enter Your Email To Proceed
+            <span className="py-4 text-md w-2/3 text-center text-gray-500">
+              Enter the OTP to reset your password
             </span>
           </div>
           <form className="py-1" onSubmit={formik.handleSubmit}>
@@ -30,7 +31,7 @@ const Password = () => {
               <img src={avatar} className={styles.profileImage} alt="avatar" />
             </div>
             <div className="text-box flex flex-col items-center gap-6">
-              <input {...formik.getFieldProps('Password')} type="text" placeholder='enter your email' className={styles.input} />
+              <input {...formik.getFieldProps('Password')} type="text" placeholder='enter the OTP' className={styles.input} />
               <button type='submit' className={styles.btn}>Reset</button>
             </div>
             <div className="text-center py-">
@@ -43,4 +44,4 @@ const Password = () => {
   )
 }
 
-export default Password
+export default Recovery
