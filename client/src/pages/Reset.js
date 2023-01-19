@@ -8,7 +8,8 @@ import { validatePassword } from '../helper/validate';
 const Reset = () => {
   const formik = useFormik({
     initialValues: {
-      Password: ''
+      Password: '',
+      confirmPassword: ""
     },
     validate: validatePassword,
     validateOnBlur: false,
@@ -22,15 +23,14 @@ const Reset = () => {
         <div className={styles.glass}>
           <div className="title flex flex-col items-center">
             <span className="py-4 text-md w-2/3 text-center text-gray-500">
-              Enter the Email to reset your password
+              Set New Password
             </span>
           </div>
           <form className="py-1" onSubmit={formik.handleSubmit}>
-            <div className="profile flex justify-center py-4">
-              <img src={avatar} className={styles.profileImage} alt="avatar" />
-            </div>
             <div className="text-box flex flex-col items-center gap-6">
-              <input {...formik.getFieldProps('Password')} type="text" placeholder='enter your email' className={styles.input} />
+              <input {...formik.getFieldProps('Password')} type="password" placeholder='set new password' className={styles.input} />
+              <input {...formik.getFieldProps('confirmPassword')} type="password" placeholder='Repeat Password' className={styles.input} />
+
               <button type='submit' className={styles.btn}>Reset</button>
             </div>
             <div className="text-center py-">
