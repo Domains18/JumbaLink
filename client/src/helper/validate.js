@@ -11,3 +11,16 @@ export async function validateUserName(values) {
 
     return errors
 }
+//  password
+function verifyPassword( error = {}, values){
+    const specialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+    if (!values.Password || values.Password == " ") {
+        error.Password = toast.error("Password cannot be empty")
+    } 
+    else if (values.Password < 4) {
+        error.Password = toast.error("Password Must be at least 4 characters")
+    }
+    else if(!specialChars.test(values.Password)) {
+        error.Password = toast.error("Password Must contain at least one special character")
+    }
+}

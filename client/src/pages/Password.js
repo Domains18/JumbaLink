@@ -14,7 +14,7 @@ const Password = () => {
     initialValues: {
       Password: ''
     },
-    validate: validateUserName,
+    validate: ,
     validateOnBlur: false,
     validateOnChange: false,
     onSubmit: async values => {console.log(values)}
