@@ -38,7 +38,7 @@ const Register = () => {
               <button type='submit' className={styles.btn}>LogIn</button>
             </div>
             <div className="text-center py-">
-              <span className='text-blue-500'>No Account? <Link to="/register" className='text-red-500'> Register here</Link> </span>
+              <span className='text-blue-500'>Already Have An account? <Link to="/register" className='text-red-900'> login here</Link> </span>
             </div>
           </form>
         </div>
