@@ -13,13 +13,15 @@ const UserName = () => {
   const formik = useFormik({
     initialValues: {
       UserName: ''
-    }, 
+    },
+    validate: validateUserName,
     validateOnBlur: false,
     validateOnChange: false,
     onSubmit: async values => {console.log(values)}
   })
   return (
     <div className="container mx-auto">
+          <Toaster position='top-center' reverseOrder={false}></Toaster>
       <div className="flex justify-center items-center min-h-screen">
         <div className={styles.glass}>
           <div className="title flex flex-col items-center">
