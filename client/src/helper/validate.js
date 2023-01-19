@@ -25,3 +25,9 @@ function verifyPassword( error = {}, values){
     }
     return error;
 }
+
+export async function validatePassword(values) {
+    const error = verifyPassword({}, values);
+
+    return error;
+}
