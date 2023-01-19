@@ -5,7 +5,7 @@ import styles from '../styles/Username.module.css';
 const UserName = () => {
   return (
     <div className="container mx-auto">
-      <div className="flex h-screen">
+      <div className="flex justify-center items-center min-h-screen">
         <div className={styles.glass}>
           <div className="title flex flex-col items-center">
             <span className="py-4 text-xl w-2/3 text-center text-gray-500">
@@ -22,6 +22,7 @@ const UserName = () => {
               <input type="text" placeholder='userName' className='border-4 py-2 rounded-lg mr-px' />
               <button type='submit' className={styles.btn}>LogIn</button>
             </div>
+
 
             <div className="text-center py-">
               <span className='text-blue-500'>No Account? <Link to="/register" className='text-red-500'> Register here</Link> </span>
