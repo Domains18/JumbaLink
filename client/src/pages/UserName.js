@@ -4,6 +4,11 @@ import avatar from '../assets/profile.png';
 import styles from '../styles/Username.module.css';
 import { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
+import { validateUserName } from '../helper/validate';
+
+
+
+
 const UserName = () => {
   const formik = useFormik({
     initialValues: {
