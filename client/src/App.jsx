@@ -15,11 +15,31 @@ import UserName from "./pages/UserName";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <div>Root Route</div>
+        element: <UserName></UserName>
     }, 
     {
         path: "/register",
-        element: <div>Register Route</div>
+        element: <Register></Register>
+    },
+    {
+        path: "/recovery",
+        element: <Recovery></Recovery>
+    },
+    {
+        path: "/reset",
+        element: <Reset></Reset>
+    },
+    {
+        path: "/password",
+        element: <Password></Password>
+    },
+    {
+        path: "/profile",
+        element: <Profile></Profile>
+    },
+    {
+        path: "*",
+        element: <Error404></Error404>
     }
 ]);
 export default function App() {
