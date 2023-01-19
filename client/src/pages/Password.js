@@ -4,7 +4,7 @@ import avatar from '../assets/profile.png';
 import styles from '../styles/Username.module.css';
 import { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
-import { validateUserName } from '../helper/validate';
+import { validateUserName, validatePassword } from '../helper/validate';
 
 
 
@@ -14,7 +14,7 @@ const Password = () => {
     initialValues: {
       Password: ''
     },
-    validate: ,
+    validate: validatePassword,
     validateOnBlur: false,
     validateOnChange: false,
     onSubmit: async values => {console.log(values)}
@@ -34,13 +34,13 @@ const Password = () => {
               <img src={avatar} className={styles.profileImage} alt="avatar" />
             </div>
             <div className="text-box flex flex-col items-center gap-6">
-              <input {...formik.getFieldProps('UserName')}type="text" placeholder='enter your password' className='border-4 py-2 rounded-lg  w-3/4' />
+              <input {...formik.getFieldProps('Password')}type="password" placeholder='enter your password' className='border-4 py-2 rounded-lg  w-full' />
               <button type='submit' className={styles.btn}>LogIn</button>
             </div>
 
 
             <div className="text-center py-">
-              <span className='text-blue-500'>No Account? <Link to="/register" className='text-red-500'> Register here</Link> </span>
+              <span className='text-blue-500'>Forgot Password? <Link to="/reset" className='text-red-500'> Reset here</Link> </span>
             </div>
           </form>
         </div>
