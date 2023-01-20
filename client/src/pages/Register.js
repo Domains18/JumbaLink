@@ -12,7 +12,9 @@ import { validateUserName } from '../helper/validate';
 const Register = () => {
   const formik = useFormik({
     initialValues: {
-      UserName: ''
+      email: "",
+      UserName: "",
+      password: "",
     },
     validateOnBlur: false,
     validateOnChange: false,
@@ -35,7 +37,7 @@ const Register = () => {
             <div className="text-box flex flex-col items-center gap-6">
               <h4 className='text-5xl font-bold '>Hello </h4>
               <input {...formik.getFieldProps('UserName')}type="text" placeholder='Name' className={styles.input} />
-              <button type='submit' className={styles.btn}>LogIn</button>
+              <button type='submit' className={styles.btn}>Register</button>
             </div>
             <div className="text-center py-">
               <span className='text-blue-500'>Already Have An account? <Link to="/register" className='text-red-900'> login here</Link> </span>
