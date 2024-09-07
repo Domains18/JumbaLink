@@ -10,8 +10,14 @@ export default function RealEstateSaasLandingPage() {
         <div className="flex flex-col min-h-screen">
             <header className="px-4 lg:px-6 h-14 flex items-center justify-center">
                 <div className="w-full max-w-6xl flex justify-between items-center">
-                    <Link className="flex items-center justify-center" href="#">
-                        <Building2 className="h-6 w-6 text-primary" />
+                    <Link className="flex items-center justify-center" href="/">
+                        <Image
+                            alt="JumbaLink"
+                            height="32"
+                            src="/logo.png?height=32"
+                            width="32"
+                            className="rounded-full"
+                        />
                         <span className="ml-2 text-lg font-bold">JumbaLink</span>
                     </Link>
                     <nav className="flex gap-4 sm:gap-6">
@@ -22,10 +28,13 @@ export default function RealEstateSaasLandingPage() {
                             Pricing
                         </Link>
                         <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                            About
+                            Contact
                         </Link>
                         <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
-                            Contact
+                            Careers
+                        </Link>
+                        <Link className="text-sm font-medium hover:underline underline-offset-4" href="#">
+                            Blog
                         </Link>
                     </nav>
                 </div>
@@ -104,7 +113,7 @@ export default function RealEstateSaasLandingPage() {
                         </div>
                     </div>
                 </section>
-                <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+                {/* <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
                     <div className="container px-4 md:px-6 mx-auto max-w-6xl">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
                             Pricing Plans
@@ -160,7 +169,7 @@ export default function RealEstateSaasLandingPage() {
                             ))}
                         </div>
                     </div>
-                </section>
+                </section> */}
                 {/* <section className="w-full py-12 md:py-24 lg:py-32">
                     <div className="container px-4 md:px-6 mx-auto max-w-6xl">
                         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
@@ -210,28 +219,27 @@ export default function RealEstateSaasLandingPage() {
                         </div>
                     </div>
                 </section> */}
-                <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-white">
-                    <div className="container px-4 md:px-6 mx-auto max-w-6xl">
-                        <div className="flex flex-col items-center space-y-4 text-center">
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                                Ready to Transform Your Property Management?
-                            </h2>
-                            <p className="max-w-[600px] text-gray-200 md:text-xl">
-                                Join thousands of satisfied real estate professionals. Start your free trial today.
-                            </p>
-                            <div className="w-full max-w-sm space-y-2">
-                                <form className="flex space-x-2">
-                                    <Input
-                                        className="max-w-lg flex-1 bg-white text-gray-900"
-                                        placeholder="Enter your email"
-                                        type="email"
-                                    />
-                                    <Button className="bg-white text-primary hover:bg-gray-100" type="submit">
-                                        Get Started
-                                    </Button>
-                                </form>
-                            </div>
-                        </div>
+                <section className="relative w-full py-12 md:py-16 lg:py-20 xl:py-24 bg-gray-900 text-white">
+                    <div className="container px-4 md:px-6 mx-auto max-w-4xl text-center">
+                        <h2 className="text-2xl md:text-3xl font-bold tracking-tight sm:text-4xl">
+                            Get Notified When We Launch!
+                        </h2>
+                        <p className="mt-4 max-w-[600px] mx-auto text-gray-400 md:text-lg">
+                            Sign up now and be the first to try JumbaLink when we go live. Join our mailing list and get
+                            exclusive access to our launch offer.
+                        </p>
+                        <form className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                                className="w-full sm:w-auto px-4 py-3 text-gray-900 bg-white rounded-md focus:ring-primary focus:border-primary"
+                                required
+                            />
+                            <Button className="w-full sm:w-auto bg-primary text-white hover:bg-primary-dark">
+                                Notify Me
+                            </Button>
+                        </form>
+                        <p className="mt-4 text-gray-500 text-sm">We respect your privacy. Unsubscribe at any time.</p>
                     </div>
                 </section>
             </main>
