@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { BarChart2, Building2, Check, Key, Users } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { BarChart2, Key, Users } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -246,6 +245,7 @@ export default function RealEstateSaasLandingPage() {
             <footer className="w-full py-6 bg-gray-100">
                 <div className="container px-4 md:px-6 mx-auto max-w-6xl flex flex-col sm:flex-row justify-between items-center">
                     <p className="text-xs text-gray-500">© 2023 JumbaLink. All rights reserved.</p>
+                    <p className="text-xs text-gray-500">Product of Nerds Catapult</p>
                     <nav className="flex gap-4 sm:gap-6 mt-4 sm:mt-0">
                         <Link className="text-xs hover:underline underline-offset-4" href="#">
                             Terms of Service
